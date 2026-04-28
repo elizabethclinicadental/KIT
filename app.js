@@ -1,7 +1,6 @@
-// ===== DATOS =====
 const citas = JSON.parse(localStorage.getItem("citas") || "[]");
 
-// ===== GUARDAR =====
+// GUARDAR
 function guardar() {
 const nombre = document.getElementById("nombre").value.trim();
 const telefono = document.getElementById("telefono").value.trim();
@@ -29,16 +28,16 @@ alert("Cita guardada");
 document.getElementById("citaForm").reset();
 }
 
-// ===== PANEL =====
+// PANEL
 function mostrarPanel(){
-document.getElementById("panel-acceso").style.display = "block";
+document.getElementById("panel-acceso").style.display = "flex";
 }
 
 function cerrarPanel(){
 document.getElementById("panel-acceso").style.display = "none";
 }
 
-// ===== LOGIN =====
+// LOGIN
 function doLogin(){
 const u = document.getElementById('lu').value.trim();
 const p = document.getElementById('lp').value.trim();
@@ -52,7 +51,7 @@ alert("Credenciales incorrectas");
 }
 }
 
-// ===== RENDER =====
+// RENDER
 function render() {
 const cont = document.getElementById("citas");
 
@@ -63,21 +62,24 @@ return;
 
 const ordenadas = [...citas].sort((a,b)=>b.id-a.id);
 
-cont.innerHTML = ordenadas.map(c => ` <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;"> <strong>${c.nombre}</strong> (${c.estado})<br>
-📞 ${c.tel}<br>
-📋 ${c.trat}<br>
-📅 ${c.fecha}<br><br>
+cont.innerHTML = ordenadas.map(c => ` <div class="cita-card"> <strong>${c.nombre}</strong> <span class="cita-estado estado-${c.estado}">${c.estado}</span><br>
 
 ```
-  <button onclick="cambiarEstado(${c.id}, 'confirmada')">Confirmar</button>
-  <button onclick="cambiarEstado(${c.id}, 'cancelada')">Cancelar</button>
+  📞 ${c.tel}<br>
+  📋 ${c.trat}<br>
+  📅 ${c.fecha}
+
+  <div class="cita-actions">
+    <button onclick="cambiarEstado(${c.id}, 'confirmada')">✔ Confirmar</button>
+    <button onclick="cambiarEstado(${c.id}, 'cancelada')">✖ Cancelar</button>
+  </div>
 </div>
 ```
 
 `).join("");
 }
 
-// ===== CAMBIAR ESTADO =====
+// CAMBIAR ESTADO
 function cambiarEstado(id, estado){
 const cita = citas.find(c => c.id === id);
 if(!cita) return;
@@ -85,4 +87,12 @@ if(!cita) return;
 cita.estado = estado;
 localStorage.setItem("citas", JSON.stringify(citas));
 render();
+}
+
+// CERRAR AL HACER CLICK FUERA
+window.onclick = function(e){
+const panel = document.getElementById("panel-acceso");
+if(e.target === panel){
+panel.style.display = "none";
+}
 }
