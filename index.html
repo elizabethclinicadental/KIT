@@ -220,13 +220,22 @@
           </div>
           <div class="field-group">
             <label for="fecha">Fecha preferida</label>
-            <input type="date" id="fecha" name="fecha" required>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">Solicitar cita →</button>
-          <p class="form-note">Tus datos son confidenciales y solo se usarán para gestionar tu cita.</p>
-        </form>
-        <br><br>
-<button onclick="mostrarPanel()">⚙️ Acceso admin</button>
+            <input id="nombre" placeholder="Nombre" required><br><br>
+<input id="telefono" placeholder="Teléfono" required><br><br>
+
+<select id="trat" required>
+  <option value="">Tratamiento</option>
+  <option>Implantes</option>
+  <option>Ortodoncia</option>
+  <option>Blanqueamiento</option>
+</select><br><br>
+
+<input type="date" id="fecha" required><br><br>
+
+<button class="btn btn-primary">Pedir cita</button>
+
+
+⚙️ Acceso admin
       </div>
     </div>
   </div>
