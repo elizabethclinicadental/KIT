@@ -4,105 +4,318 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clínica Dental La Fuensanta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
 <body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">La Fuensanta</span>
+    </div>
+    <div class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#contacto">Contacto</a>
+      <button class="btn-nav" onclick="scrollToForm()">Reservar cita</button>
+    </div>
+  </div>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Clínica Dental en Murcia</h1>
-  <p>Confianza, tecnología y sonrisa perfecta</p>
-
-  <div class="hero-buttons">
-    <button class="btn btn-main" onclick="tel()">📞 Llamar</button>
-    <button class="btn btn-wa" onclick="wa()">💬 WhatsApp</button>
-    <button class="btn btn-main" onclick="scrollToForm()">📅 Pedir cita</button>
+  <div class="hero-bg">
+    <div class="hero-circle c1"></div>
+    <div class="hero-circle c2"></div>
+    <div class="hero-circle c3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">Clínica Dental · Murcia</div>
+    <h1 class="hero-title">
+      Tu sonrisa,<br>
+      <em>nuestra pasión</em>
+    </h1>
+    <p class="hero-sub">Tecnología avanzada y trato humano en el corazón de Beniaján. Más de 15 años cuidando tu salud dental.</p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" onclick="scrollToForm()">
+        <span class="btn-icon">📅</span> Pedir cita gratis
+      </button>
+      <button class="btn btn-ghost" onclick="tel()">
+        <span class="btn-icon">📞</span> Llamar ahora
+      </button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">+2.000</span>
+        <span class="stat-label">Pacientes</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">15 años</span>
+        <span class="stat-label">Experiencia</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">4.9★</span>
+        <span class="stat-label">Valoración</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="hero-img-box">
+      <div class="hero-img-inner">
+        <div class="tooth-icon">🦷</div>
+        <p class="img-caption">Primera revisión<br><strong>completamente gratis</strong></p>
+      </div>
+      <div class="floating-tag tag1">✓ Sin dolor</div>
+      <div class="floating-tag tag2">✓ Tecnología láser</div>
+      <div class="floating-tag tag3">✓ Presupuesto gratis</div>
+    </div>
   </div>
 </section>
+
+<!-- PROMO BANNER -->
+<div class="promo-banner">
+  <span class="promo-star">✦</span>
+  <span>Primera revisión <strong>GRATIS</strong> — Sin compromiso, te explicamos todas las opciones</span>
+  <span class="promo-star">✦</span>
+  <button class="btn-promo" onclick="scrollToForm()">Reservar →</button>
+</div>
 
 <!-- SERVICIOS -->
-<section class="container">
-  <h2>Servicios</h2>
-  <div class="grid">
-    <div class="card">Implantes dentales</div>
-    <div class="card">Ortodoncia</div>
-    <div class="card">Blanqueamiento</div>
-    <div class="card">Endodoncia</div>
-    <div class="card">Limpieza dental</div>
+<section class="servicios" id="servicios">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag">Lo que hacemos</p>
+      <h2 class="section-title">Nuestros tratamientos</h2>
+      <p class="section-sub">Desde revisiones rutinarias hasta tratamientos de alta complejidad. Todo bajo el mismo techo.</p>
+    </div>
+    <div class="servicios-grid">
+      <div class="servicio-card" onclick="scrollToForm()">
+        <div class="servicio-icon">🦷</div>
+        <h3>Implantes dentales</h3>
+        <p>Solución permanente para dientes perdidos. Aspecto y función natural.</p>
+        <span class="servicio-arrow">→</span>
+      </div>
+      <div class="servicio-card" onclick="scrollToForm()">
+        <div class="servicio-icon">😁</div>
+        <h3>Ortodoncia</h3>
+        <p>Invisible o tradicional. Alineamos tu sonrisa a cualquier edad.</p>
+        <span class="servicio-arrow">→</span>
+      </div>
+      <div class="servicio-card" onclick="scrollToForm()">
+        <div class="servicio-icon">✨</div>
+        <h3>Blanqueamiento</h3>
+        <p>Blanqueamiento profesional con resultados visibles desde la primera sesión.</p>
+        <span class="servicio-arrow">→</span>
+      </div>
+      <div class="servicio-card" onclick="scrollToForm()">
+        <div class="servicio-icon">🔬</div>
+        <h3>Endodoncia</h3>
+        <p>Tratamiento de conductos sin dolor. Salvamos tu diente natural.</p>
+        <span class="servicio-arrow">→</span>
+      </div>
+      <div class="servicio-card" onclick="scrollToForm()">
+        <div class="servicio-icon">🧹</div>
+        <h3>Limpieza dental</h3>
+        <p>Higiene profesional completa. Elimina sarro y manchas con ultrasonidos.</p>
+        <span class="servicio-arrow">→</span>
+      </div>
+      <div class="servicio-card servicio-cta" onclick="scrollToForm()">
+        <p>¿No encuentras tu tratamiento?</p>
+        <strong>Consúltanos sin compromiso</strong>
+        <span class="servicio-arrow big">→</span>
+      </div>
+    </div>
   </div>
-</section>
-
-<!-- PROMO -->
-<section class="promo">
-  <h2>Primera revisión GRATIS</h2>
-  <p>Sin compromiso. Te explicamos opciones y presupuesto.</p>
 </section>
 
 <!-- TESTIMONIOS -->
-<section class="container">
-  <h2>Testimonios</h2>
-  <div class="card">"Trato increíble y resultados perfectos"</div>
-  <div class="card">"Muy profesionales, lo recomiendo"</div>
-  <div class="card">"Me quitaron el miedo al dentista"</div>
+<section class="testimonios" id="testimonios">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag">Qué dicen nuestros pacientes</p>
+      <h2 class="section-title">Testimonios reales</h2>
+    </div>
+    <div class="testimonios-grid">
+      <div class="testimonio-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonio-text">"Trato increíble y resultados perfectos. Me pusieron dos implantes y el proceso fue mucho más cómodo de lo que esperaba."</p>
+        <div class="testimonio-autor">
+          <div class="autor-avatar">ML</div>
+          <div>
+            <strong>María L.</strong>
+            <span>Implante dental</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio-card featured">
+        <div class="stars">★★★★★</div>
+        <p class="testimonio-text">"Muy profesionales y cercanos. Mi hijo tiene miedo al dentista y aquí lo tratan de maravilla. Lo recomiendo a toda mi familia."</p>
+        <div class="testimonio-autor">
+          <div class="autor-avatar">JR</div>
+          <div>
+            <strong>José R.</strong>
+            <span>Ortodoncia infantil</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonio-text">"Me quitaron el miedo al dentista. Explicaron todo el proceso y no sentí nada. El blanqueamiento quedó espectacular."</p>
+        <div class="testimonio-autor">
+          <div class="autor-avatar">AP</div>
+          <div>
+            <strong>Ana P.</strong>
+            <span>Blanqueamiento</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- FORMULARIO -->
-<section class="container" id="form">
-  <h2>Reservar cita</h2>
-
-  <form id="citaForm" onsubmit="event.preventDefault(); guardar();">
-    <input id="nombre" name="nombre" placeholder="Nombre" required>
-    <input id="telefono" name="telefono" placeholder="Teléfono" required pattern="[0-9+ ]{6,}">
-    
-    <select id="trat" name="trat" required>
-      <option value="">Selecciona tratamiento</option>
-      <option>Implante</option>
-      <option>Limpieza</option>
-      <option>Blanqueamiento</option>
-    </select>
-
-    <input type="date" id="fecha" name="fecha" required>
-
-    <button type="submit" class="btn btn-main">Reservar</button>
-  </form>
-
-  <p class="form-note">Te confirmaremos la cita por teléfono o WhatsApp.</p>
+<section class="form-section" id="form">
+  <div class="container">
+    <div class="form-layout">
+      <div class="form-info">
+        <p class="section-tag">Agenda tu visita</p>
+        <h2 class="section-title">Reservar cita</h2>
+        <p>Te contactaremos en menos de 24 horas para confirmar día y hora. Sin esperas, sin complicaciones.</p>
+        <div class="form-promises">
+          <div class="promise"><span>✓</span> Primera revisión gratuita</div>
+          <div class="promise"><span>✓</span> Presupuesto sin compromiso</div>
+          <div class="promise"><span>✓</span> Confirmación en menos de 24h</div>
+        </div>
+      </div>
+      <div class="form-box">
+        <form id="citaForm" onsubmit="event.preventDefault(); guardar();">
+          <div class="field-group">
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="field-group">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" placeholder="6XX XXX XXX" required pattern="[0-9+ ]{6,}">
+          </div>
+          <div class="field-group">
+            <label for="trat">Tratamiento</label>
+            <select id="trat" name="trat" required>
+              <option value="">Selecciona un tratamiento</option>
+              <option>Primera revisión gratuita</option>
+              <option>Implante dental</option>
+              <option>Ortodoncia</option>
+              <option>Blanqueamiento</option>
+              <option>Endodoncia</option>
+              <option>Limpieza dental</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="fecha">Fecha preferida</label>
+            <input type="date" id="fecha" name="fecha" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Solicitar cita →</button>
+          <p class="form-note">Tus datos son confidenciales y solo se usarán para gestionar tu cita.</p>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACTO -->
-<section class="container">
-  <h2>Contacto</h2>
-  <p>📞 968 83 73 16</p>
-  <p>📍 C/ Algezares 74. Beniaján (Murcia)</p>
-  <button class="btn btn-wa" onclick="wa()">WhatsApp</button>
+<section class="contacto" id="contacto">
+  <div class="container">
+    <div class="contacto-grid">
+      <div class="contacto-item">
+        <div class="contacto-icon">📞</div>
+        <div>
+          <strong>Teléfono</strong>
+          <a href="tel:968837316">968 83 73 16</a>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <div class="contacto-icon">📍</div>
+        <div>
+          <strong>Dirección</strong>
+          <span>C/ Algezares 74, Beniaján (Murcia)</span>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <div class="contacto-icon">🕐</div>
+        <div>
+          <strong>Horario</strong>
+          <span>Lunes a Viernes · 9:00 – 20:00</span>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <div class="contacto-icon">💬</div>
+        <div>
+          <strong>WhatsApp</strong>
+          <a href="#" onclick="wa()">644 21 00 97</a>
+        </div>
+      </div>
+    </div>
+    <div class="contacto-cta">
+      <button class="btn btn-wa" onclick="wa()">💬 Escríbenos por WhatsApp</button>
+      <button class="btn btn-ghost-dark" onclick="tel()">📞 Llamar</button>
+    </div>
+  </div>
 </section>
 
-<!-- BOTÓN CHAT -->
-<button class="chat-btn" onclick="toggleChat()">💬</button>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">✦</span>
+        <span>Clínica Dental La Fuensanta</span>
+      </div>
+      <p class="footer-copy">© 2025 Clínica Dental La Fuensanta · Beniaján, Murcia</p>
+      <a href="#panel-acceso" class="footer-admin">Acceso panel</a>
+    </div>
+  </div>
+</footer>
 
-<!-- CHAT -->
+<!-- BOTÓN FLOTANTE WA -->
+<button class="fab-wa" onclick="wa()" title="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.99.584 3.842 1.59 5.4L2.06 22l4.72-1.503A9.944 9.944 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.96 7.96 0 0 1-4.081-1.124l-.292-.174-3.016.96.92-2.94-.192-.3A7.957 7.957 0 0 1 4 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"/></svg>
+</button>
+
+<!-- CHAT BOT -->
+<button class="chat-btn" id="chatToggle" onclick="toggleChat()" title="Chat">💬</button>
 <div class="chat" id="chat">
-  <div class="chat-header">Asistente</div>
-  <div class="chat-messages" id="msgs"></div>
+  <div class="chat-header">
+    <span>🦷 Asistente La Fuensanta</span>
+    <button onclick="toggleChat()" class="chat-close">✕</button>
+  </div>
+  <div class="chat-messages" id="msgs">
+    <div class="msg bot">¡Hola! Soy el asistente de La Fuensanta. ¿En qué puedo ayudarte?</div>
+  </div>
   <div class="chat-input">
-    <input id="msgInput" placeholder="Escribe tu pregunta...">
+    <input id="msgInput" placeholder="Escribe tu pregunta..." onkeydown="if(event.key==='Enter') send()">
     <button onclick="send()">➤</button>
   </div>
 </div>
 
-<!-- LOGIN -->
-<div id="login">
-  <h2>Panel</h2>
-  <input id="user" placeholder="Usuario">
-  <input id="pass" type="password" placeholder="Contraseña">
-  <button onclick="login()">Entrar</button>
-</div>
-
-<!-- PANEL CRM -->
-<div id="panel">
-  <h2>CRM - Citas</h2>
-  <div id="citas"></div>
+<!-- PANEL ACCESO -->
+<div id="panel-acceso" style="display:none;">
+  <div id="login">
+    <h2>Acceso panel</h2>
+    <input id="user" placeholder="Usuario">
+    <input id="pass" type="password" placeholder="Contraseña">
+    <button class="btn btn-primary" onclick="login()">Entrar</button>
+  </div>
+  <div id="panel">
+    <h2>CRM — Citas pendientes</h2>
+    <div id="citas"></div>
+  </div>
 </div>
 
 <script src="assets/js/app.js"></script>
