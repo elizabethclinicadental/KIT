@@ -134,7 +134,7 @@ function render() {
       </div>
     </div>
   `).join("");
-}
+} 
 
 function cambiarEstado(id, nuevoEstado) {
   const cita = citas.find(x => x.id === id);
