@@ -223,6 +223,27 @@
             <input id="nombre" placeholder="Nombre" required><br><br>
 <input id="telefono" placeholder="Teléfono" required><br><br>
 
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Dental La Fuensanta</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- HERO (simple para prueba) -->
+
+<section class="container" style="padding:120px 20px;">
+  <h1>Clínica Dental La Fuensanta</h1>
+
+  <form id="citaForm" onsubmit="event.preventDefault(); guardar();">
+    <input id="nombre" placeholder="Nombre" required><br><br>
+    <input id="telefono" placeholder="Teléfono" required><br><br>
+
+```
 <select id="trat" required>
   <option value="">Tratamiento</option>
   <option>Implantes</option>
@@ -233,9 +254,42 @@
 <input type="date" id="fecha" required><br><br>
 
 <button class="btn btn-primary">Pedir cita</button>
+```
 
+  </form>
 
-⚙️ Acceso admin
+<br><br> <button onclick="mostrarPanel()">⚙️ Acceso admin</button>
+
+</section>
+
+<!-- PANEL -->
+
+<div id="panel-acceso">
+
+  <!-- LOGIN -->
+
+  <div id="login">
+    <h2>Acceso panel</h2>
+    <input id="lu" placeholder="Usuario">
+    <input id="lp" type="password" placeholder="Contraseña">
+    <button class="btn btn-primary" onclick="doLogin()">Entrar</button>
+  </div>
+
+  <!-- PANEL -->
+
+  <div id="panel" style="display:none;">
+    <h2>📊 Citas</h2>
+    <button onclick="cerrarPanel()">Cerrar</button>
+    <div id="citas"></div>
+  </div>
+
+</div>
+
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>
+
       </div>
     </div>
   </div>
