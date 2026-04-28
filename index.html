@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Dental La Fuensanta</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Clínica Dental en Murcia</h1>
+  <p>Confianza, tecnología y sonrisa perfecta</p>
+
+  <div class="hero-buttons">
+    <button class="btn btn-main" onclick="tel()">📞 Llamar</button>
+    <button class="btn btn-wa" onclick="wa()">💬 WhatsApp</button>
+    <button class="btn btn-main" onclick="scrollToForm()">📅 Pedir cita</button>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="container">
+  <h2>Servicios</h2>
+  <div class="grid">
+    <div class="card">Implantes dentales</div>
+    <div class="card">Ortodoncia</div>
+    <div class="card">Blanqueamiento</div>
+    <div class="card">Endodoncia</div>
+    <div class="card">Limpieza dental</div>
+  </div>
+</section>
+
+<!-- PROMO -->
+<section class="promo">
+  <h2>Primera revisión GRATIS</h2>
+  <p>Sin compromiso. Te explicamos opciones y presupuesto.</p>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="container">
+  <h2>Testimonios</h2>
+  <div class="card">"Trato increíble y resultados perfectos"</div>
+  <div class="card">"Muy profesionales, lo recomiendo"</div>
+  <div class="card">"Me quitaron el miedo al dentista"</div>
+</section>
+
+<!-- FORMULARIO -->
+<section class="container" id="form">
+  <h2>Reservar cita</h2>
+
+  <form id="citaForm" onsubmit="event.preventDefault(); guardar();">
+    <input id="nombre" name="nombre" placeholder="Nombre" required>
+    <input id="telefono" name="telefono" placeholder="Teléfono" required pattern="[0-9+ ]{6,}">
+    
+    <select id="trat" name="trat" required>
+      <option value="">Selecciona tratamiento</option>
+      <option>Implante</option>
+      <option>Limpieza</option>
+      <option>Blanqueamiento</option>
+    </select>
+
+    <input type="date" id="fecha" name="fecha" required>
+
+    <button type="submit" class="btn btn-main">Reservar</button>
+  </form>
+
+  <p class="form-note">Te confirmaremos la cita por teléfono o WhatsApp.</p>
+</section>
+
+<!-- CONTACTO -->
+<section class="container">
+  <h2>Contacto</h2>
+  <p>📞 968 83 73 16</p>
+  <p>📍 C/ Algezares 74. Beniaján (Murcia)</p>
+  <button class="btn btn-wa" onclick="wa()">WhatsApp</button>
+</section>
+
+<!-- BOTÓN CHAT -->
+<button class="chat-btn" onclick="toggleChat()">💬</button>
+
+<!-- CHAT -->
+<div class="chat" id="chat">
+  <div class="chat-header">Asistente</div>
+  <div class="chat-messages" id="msgs"></div>
+  <div class="chat-input">
+    <input id="msgInput" placeholder="Escribe tu pregunta...">
+    <button onclick="send()">➤</button>
+  </div>
+</div>
+
+<!-- LOGIN -->
+<div id="login">
+  <h2>Panel</h2>
+  <input id="user" placeholder="Usuario">
+  <input id="pass" type="password" placeholder="Contraseña">
+  <button onclick="login()">Entrar</button>
+</div>
+
+<!-- PANEL CRM -->
+<div id="panel">
+  <h2>CRM - Citas</h2>
+  <div id="citas"></div>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
